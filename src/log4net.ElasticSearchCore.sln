@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "log4net.ElasticSearchCore", "log4net.ElasticSearchCore\log4net.ElasticSearchCore.csproj", "{1CB1DF1F-5D50-4798-AA26-4D7D662239EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "log4net.ElasticSearchCore.CoreConsoleTest", "log4net.ElasticSearchCore.CoreConsoleTest\log4net.ElasticSearchCore.CoreConsoleTest.csproj", "{C015EE28-99F1-4F23-92F1-97DE2BC3E8B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "log4net.ElasticSearchCore.CoreConsoleTest", "log4net.ElasticSearchCore.CoreConsoleTest\log4net.ElasticSearchCore.CoreConsoleTest.csproj", "{C015EE28-99F1-4F23-92F1-97DE2BC3E8B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{2CA6F023-FD0C-4ADB-99D6-834875F7B562}"
+	ProjectSection(SolutionItems) = preProject
+		..\LICENSE = ..\LICENSE
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

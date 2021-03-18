@@ -2,6 +2,13 @@
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
+		<Version>1.0.0-alpha</Version>
+		<Authors>Alper Konuralp</Authors>
+		<Description>log4net.ElasticSearchCore appender.</Description>
+		<PackageProjectUrl>https://github.com/alperkonuralp/log4net.ElasticSearchCore</PackageProjectUrl>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<RepositoryUrl>https://github.com/alperkonuralp/log4net.ElasticSearchCore</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -9,5 +16,12 @@
 		<PackageReference Include="log4net.JsonLayout" Version="1.0.2" />
 		<PackageReference Include="MessagePack" Version="2.2.85" />
 		<PackageReference Include="System.Net.Http" Version="4.3.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\LICENSE">
+	    <Pack>True</Pack>
+	    <PackagePath></PackagePath>
+	  </None>
 	</ItemGroup>
 </Project>
