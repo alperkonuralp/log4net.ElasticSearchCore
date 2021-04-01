@@ -15,7 +15,7 @@ namespace log4net.ElasticSearchCore.ElasticSearchResponse
 		public string Id { get; set; }
 
 		[Key("_version")]
-		public int Version { get; set; }
+		public int? Version { get; set; }
 
 		[Key("result")]
 		public string Result { get; set; }
@@ -24,12 +24,15 @@ namespace log4net.ElasticSearchCore.ElasticSearchResponse
 		public ResponseItemIndexShards Shards { get; set; }
 
 		[Key("_seq_no")]
-		public int SeqNo { get; set; }
+		public int? SeqNo { get; set; }
 
 		[Key("_primary_term")]
-		public int PrimaryTerm { get; set; }
+		public int? PrimaryTerm { get; set; }
 
 		[Key("status")]
 		public int Status { get; set; }
+
+		[Key("error")]
+		public ResponseItemIndexError Error { get; set; }
 	}
 }

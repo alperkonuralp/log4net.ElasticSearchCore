@@ -5,8 +5,7 @@ namespace log4net.ElasticSearchCore
 {
 	public interface IQueueData
 	{
-		int BufferSize { get; set; }
-		string ConnectionString { get; }
+		ElasticSearchAppender Appender { get; }
 		DateTimeOffset LastOperationTime { get; set; }
 		string Name { get; }
 		IQueueManager QueueManager { get; }

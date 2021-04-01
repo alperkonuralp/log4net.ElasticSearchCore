@@ -6,7 +6,6 @@ namespace log4net.ElasticSearchCore
 	{
 
 		int WaitMilliSeconds { get; set; }
-		IErrorHandler ErrorHandler { get; set; }
 
 		void Start();
 		void Stop();

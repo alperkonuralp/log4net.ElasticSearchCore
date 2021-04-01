@@ -6,7 +6,7 @@ namespace log4net.ElasticSearchCore
 	{
 		bool IsReadyForSendMessages();
 
-		void AddToQueue(string name, string connectionString, string indiceName, string message, int bufferSize);
+		void AddToQueue(ElasticSearchAppender appender, string indiceName, string message);
 
 		IEnumerable<IQueueData> GetQueuesToReadyToSendMessages();
 

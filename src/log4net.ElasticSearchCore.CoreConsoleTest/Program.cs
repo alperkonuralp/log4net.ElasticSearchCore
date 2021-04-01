@@ -19,24 +19,34 @@ namespace log4net.ElasticSearchCore.CoreConsoleTest
 			var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
 			XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
 
+			FirstDemo(args);
+
+			//await SecondDemo();
+
+			Console.WriteLine($"{DateTime.Now} - Hit enter");
+			Console.ReadLine();
+			Console.WriteLine($"{DateTime.Now} - End");
+		}
+
+		private static void FirstDemo(string[] args)
+		{
 			log.Info("Hello logging world!");
 
 			log.Warn(new { Id = 1, Name = "Alper" });
 
 			log.Error(new { Id = 1, Name = "Alper" }, new ArgumentNullException(nameof(args)));
+		}
 
+		private static async Task SecondDemo()
+		{
 			var sw = Stopwatch.StartNew();
 			Console.WriteLine($"{DateTime.Now} - Started.");
 
-			var lists = Enumerable.Range(0, 20).Select(x => Task.Run(() => AddLog(x,500)));
+			var lists = Enumerable.Range(0, 20).Select(x => Task.Run(() => AddLog(x, 500)));
 
 			await Task.WhenAll(lists);
 
 			Console.WriteLine(sw.Elapsed);
-
-			Console.WriteLine($"{DateTime.Now} - Hit enter");
-			Console.ReadLine();
-			Console.WriteLine($"{DateTime.Now} - End");
 		}
 
 		public static async Task AddLog(int id, int innerCount)
